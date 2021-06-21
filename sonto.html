@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim ra so nguyen to</title>
+</head>
+<body>
+<script>
+  // function checkSNT(number) {
+  //   let check = true
+  //   for (let i = 2; i < number; i++) {
+  //     if (number % i == 0) {
+  //       check = false;
+  //       break;
+  //     }
+  //     //
+  //     if (check){
+  //       alert('la so nguyen to')
+  //     }else {
+  //       alert('khong phai so nguyen to')
+  //     }
+  //   }
+  // }
+
+
+  function checkSNT (number){
+      let check = true;
+      for (let i = 2;i < number;i++){
+          if (number%i==0){
+              check = false;
+              break
+          }
+          // if (check){
+          //     alert('so nguyen to')
+          // }else {
+          //     alert('khong la so nguyen to')
+          // }
+      }return check;
+  }
+  // function checkSNT(){
+  //    lay du lieu
+      let number = +prompt('moi ban nhap so lieu');
+      // xu ly
+      let dem = 0;
+      let so = 2;
+      while (dem<number){
+          if (checkSNT(so)){
+              // hien thi ra man hinh
+              document.write(so+'<br>');
+              dem++;
+          }
+          so++
+      }
+  // }
+</script>
+</body>
+</html>
